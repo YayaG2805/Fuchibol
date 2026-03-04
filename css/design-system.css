@@ -1,0 +1,9 @@
+:root{
+  --color-primario: #0f3d2e;      /* verde oscuro cancha */
+  --color-secundario: #1f6f4a;    /* verde medio */
+  --color-acento: #2ecc71;        /* verde brillante */
+  --color-texto: #ffffff;         /* texto blanco */
+  --color-texto-secundario: #cfd8dc; /* texto gris claro */
+  --color-fondo: #071f16;         /* fondo general */
+  --color-contenedor: #0c2a20;    /* fondo de secciones */
+}

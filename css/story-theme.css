@@ -1,0 +1,37 @@
+:root {
+  /* Paleta semántica */
+  --color-primary: #1f7a3f;     /* verde Betis */
+  --color-secondary: #ffffff;   /* blanco */
+  --color-accent: #ff8c00;      /* naranja neutro */
+
+  /* Texto y neutros */
+  --color-text: #111111;
+  --color-muted: #555555;
+
+  /* Estados cromáticos */
+  --bg-inicio: #B2FFFF;         /* inicio blanco */
+  --bg-decision: #1f7a3f;       /* decisiones verde */
+  --bg-final-positivo: #00FF00; /* verde lindo */
+  --bg-final-negativo: #c62828; /* rojo */
+  --bg-neutral: #ff8c00;        /* naranja */
+
+  /* Tipografías */
+  --font-heading: "Poppins", Arial, sans-serif;
+  --font-body: Arial, sans-serif;
+  --font-interactive: Verdana, sans-serif;
+
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+
+  /* UI */
+  --radius-md: 14px;
+  --shadow-md: 0 8px 18px rgba(0, 0, 0, 0.2);
+
+  /* Transiciones */
+  --transition-fast: 200ms ease-in-out;
+  --transition-normal: 350ms ease-in-out;
+  --transition-slow: 600ms ease-in-out;
+}

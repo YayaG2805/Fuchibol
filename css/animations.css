@@ -1,0 +1,35 @@
+/* 1) Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Pon class="story-content" a la sección principal si quieres */
+.story-content{
+  animation: fadeIn var(--transition-slow);
+}
+
+/* 2) Typing (opcional) */
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* Pon class="story-text" a una frase corta (no párrafos largos) */
+.story-text{
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2.6s steps(28, end);
+}
+
+/* 3) Pulse suave para botones destacados */
+@keyframes pulseSoft{
+  0% { transform: scale(1); }
+  50% { transform: scale(1.015); }
+  100% { transform: scale(1); }
+}
+
+/* Si a un botón le pones class="choice-button is-highlight" */
+.choice-button.is-highlight{
+  animation: pulseSoft 1.8s ease-in-out infinite;
+}

@@ -1,0 +1,47 @@
+.choice-button{
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  margin: 0.5rem auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  border: 2px solid var(--color-secondary);
+  border-radius: 10px;
+
+  color: white;
+  font-family: var(--font-interactive);
+  font-weight: 600;
+
+  text-decoration: none;
+  text-align: center;
+
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.2;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Hover */
+.choice-button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+}
+
+/* Active */
+.choice-button:active{
+  transform: translateY(0);
+}
+
+/* Accesibilidad teclado */
+.choice-button:focus-visible{
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Si quieres marcar una opción “importante” */
+.choice-button.is-highlight{
+  border-color: var(--color-accent);
+}
