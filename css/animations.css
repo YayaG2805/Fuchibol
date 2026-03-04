@@ -1,35 +1,146 @@
-/* 1) Fade in */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* ─── 1. Fade in desde abajo ─── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Pon class="story-content" a la sección principal si quieres */
-.story-content{
-  animation: fadeIn var(--transition-slow);
+/* ─── 2. Entrada del título (escala) ─── */
+@keyframes heroReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+    letter-spacing: 0.5em;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    letter-spacing: 0.05em;
+  }
 }
 
-/* 2) Typing (opcional) */
-@keyframes typing {
-  from { width: 0; }
+/* ─── 3. Pulso de brillo (decisiones críticas) ─── */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(192, 57, 43, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(192, 57, 43, 0.7), 0 0 48px rgba(192, 57, 43, 0.3);
+  }
+}
+
+/* ─── 4. Flotar (elementos decorativos) ─── */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* ─── 5. Parpadeo del cursor ─── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ─── 6. Barra de carga decorativa ─── */
+@keyframes slideIn {
+  from { width: 0%; }
   to   { width: 100%; }
 }
 
-/* Pon class="story-text" a una frase corta (no párrafos largos) */
-.story-text{
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 2.6s steps(28, end);
+/* ─── 7. Shake (final malo) ─── */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-8px); }
+  40%       { transform: translateX(8px); }
+  60%       { transform: translateX(-5px); }
+  80%       { transform: translateX(5px); }
 }
 
-/* 3) Pulse suave para botones destacados */
-@keyframes pulseSoft{
-  0% { transform: scale(1); }
-  50% { transform: scale(1.015); }
-  100% { transform: scale(1); }
+/* ─── 8. Glow loop (final bueno) ─── */
+@keyframes glowLoop {
+  0%, 100% { text-shadow: 0 0 20px rgba(76, 175, 80, 0.3); }
+  50%       { text-shadow: 0 0 40px rgba(76, 175, 80, 0.7), 0 0 80px rgba(76, 175, 80, 0.3); }
 }
 
-/* Si a un botón le pones class="choice-button is-highlight" */
-.choice-button.is-highlight{
-  animation: pulseSoft 1.8s ease-in-out infinite;
+/* ════════════════════════════════════════
+   APLICACIÓN DE ANIMACIONES
+   ════════════════════════════════════════ */
+
+/* Contenido de historia: entra con fadeInUp */
+.story-content {
+  animation: fadeInUp var(--transition-slow) ease-out both;
+}
+
+/* Encadenado de elementos — stagger */
+.story-card {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.decision-section {
+  animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+/* Título hero de la página de inicio */
+.hero-title {
+  animation: heroReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-subtitle {
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.hero-image {
+  animation: fadeInUp 0.7s ease-out 0.15s both;
+}
+
+/* Botones de elección: entran escalonados */
+.choices-grid .choice-button:nth-child(1) {
+  animation: fadeInUp 0.5s ease-out 0.35s both;
+}
+
+.choices-grid .choice-button:nth-child(2) {
+  animation: fadeInUp 0.5s ease-out 0.5s both;
+}
+
+/* Botón crítico pulsa */
+.choice-button--critical {
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+/* Finales */
+.ending-badge--bueno h1 {
+  animation: glowLoop 3s ease-in-out infinite;
+}
+
+.final-malo-wrap {
+  animation: shake 0.6s ease-out 0.5s both;
+}
+
+/* Badge de final entra con escala */
+.ending-badge {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Imagen flota suavemente */
+figure.story-image-wrap img {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Botón de reinicio */
+.restart-button {
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+/* Línea decorativa desliza */
+.divider {
+  animation: slideIn 0.8s ease-out 0.3s both;
 }

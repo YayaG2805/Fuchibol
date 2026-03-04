@@ -1,55 +1,64 @@
 <!DOCTYPE html>
-<html>  
-  <head> 
-    <meta charset="UTF-8">
-    <title> 
-      Fuchibol
-    </title>
-    <link rel="stylesheet" href="css/story-theme.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/button.css">
-    <link rel="stylesheet" href="css/animations.css">
-  </head>
-  <body class="state-inicio">
-    <section class="story-content"> 
-      <header> 
-        Universidad del Valle de Guatemala <br>
-        Diego Guevara 24128<br>
-        Sistemas y tecnologias Web<br>
-        Mi historia respecto a fuchibol
-      </header>
-      <h1 class="story-text">  
-        Fuchibol
-      </h1>
-      <p> 
-        Esta es la historia de futbol mas entretenida que vas a conocer en tu vida espero que te diviertas
-        por que tu eliges el destino de Jose Contreras mejor conocido como el <strong>"Moyo"</strong>
-      </p>
-      <h2>Historia de Jose:</h2>
-      <p> 
-        Jose es un niño de 15 años de edad el cual juega en comunicaciones en la categoria sub 20 ya que es un prodigio del futbol nacional pero le llega una oferta de un club nacional "Guastatoya FC" para a sus solo 15 años debutar en la liga mayor nacional de Guatemala,a la vez que le llega una oferta por parte de la cantera de el "Real Betis Balompie" el cual es un club español de liga mayor pero busca incorporar jovenes estrellas a su filial entonces tu seras Jose durante toda esta historia y elegiras su futuro por el.
-      </p>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuchibol</title>
+  <link rel="stylesheet" href="../../css/story-theme.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/layouts.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/animations.css">
+</head>
+<body class="page-inicio page-wrapper">
+
+  <header class="site-header">
+    <span class="brand">Fuchibol</span>
+    <p class="meta">
+      Universidad del Valle de Guatemala<br>
+      Diego Guevara 24128<br>
+      Sistemas y tecnologias Web
+    </p>
+  </header>
+
+  <main class="story-main">
+
+    <section class="story-card story-content">
+      <h1 class="hero-title">Fuchibol</h1>
+      <hr class="divider">
+      <figure class="story-image-wrap hero-image">
+        <img src="../../assets/imagenes/1decision.png" alt="Decision inicial">
+      </figure>
+      <article class="story-text-block">
+        <p>
+          Esta es la historia de futbol mas entretenida que vas a conocer en tu vida espero que te diviertas
+          por que tu eliges el destino de Jose Contreras mejor conocido como el "Moyo"
+        </p>
+        <h2>Historia de Jose:</h2>
+        <p>
+          Jose es un niño de 15 años de edad el cual juega en comunicaciones en la categoria sub 20 ya que es un prodigio del futbol nacional pero le llega una oferta de un club nacional "Guastatoya FC" para a sus solo 15 años debutar en la liga mayor nacional de Guatemala,a la vez que le llega una oferta por parte de la cantera de el "Real Betis Balompie" el cual es un club español de liga mayor pero busca incorporar jovenes estrellas a su filial entonces tu seras Jose durante toda esta historia y elegiras su futuro por el.
+        </p>
+      </article>
     </section>
-    <section  class="story-content"> 
-      <img src="assets/imagenes/1decision.png" >
+
+    <section class="decision-section">
       <h3>Decision</h3>
-      <p class="story-text"><strong>Esta decisión cambiará su vida.</strong></p>
-      <a class="choice-button" href="paginas/guastatoya.html">Me voy a Guastatoya a Debutar en liga nacional</a>
-      <br>
-      <a class="choice-button is-highlight" href="paginas/betis.html">Me voy a españa con la esperanza de un dia ganarme el puesta en el equipo mayor del Real Betis</a>
-      <br>
+      <p><strong>Esta decisión cambiará su vida.</strong></p>
+      <nav class="choices-grid">
+        <a class="choice-button" href="pages/guastatoya/guastatoya.html">Me voy a Guastatoya a Debutar en liga nacional</a>
+        <a class="choice-button" href="pages/betis/betis.html">Me voy a españa con la esperanza de un dia ganarme el puesta en el equipo mayor del Real Betis</a>
+      </nav>
     </section>
-    <footer>
-  <p>
+
+  </main>
+
+  <footer class="site-footer">
     <small>
       Universidad del Valle de Guatemala<br>
       Diego Guevara 24128<br>
       Laboratorio Full HTML
     </small>
-  </p>
-</footer>
-    
-    
-  </body>
+  </footer>
+
+</body>
 </html>
